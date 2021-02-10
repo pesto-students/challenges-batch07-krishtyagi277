@@ -36,6 +36,18 @@ $ git stash list
 $ git stash show stash@{0}
 $ git stash apply stash@{0}
 
+# 6.
+git tag basically used to mark release points or different versions of your history. So that you can easily revert back to at any point in the future easily. 
+Git has two types of tags:
+1. lightweight tag
+2. annotated tag
+
+1. lightweight tag is the simplest way to add tags. lightweight tags only stores the hash value of commit they pointing to.
+ git tag "tag-v1.0"
+
+# 7.
+Annoated tag store some extra meta data like author name, release notes, tag-message and date as complete objects in Git db. This is data is important for the release.
+git tag -a v1.1.0 -m "Releasing version v1.1.0"
 
 
 
