@@ -52,4 +52,34 @@ git tag -a v1.1.0 -m "Releasing version v1.1.0"
 # 8. git merge <Branch Name>
 While working with github we create seprate branches for each task like feature branch, bugfixes, qa-fixes etc. These all branches have some seprate functions or code which must be present in the develop branch or master branch for complete working of code. For this purpose We use concept of merging. Merging helps us to keep in sync to our branches with latest code.
 
+# 9. 
+Merge Conflicts generally arise when two people have changed the same lines in a file, or if one developer deleted a file while another developer was modifying it. In these cases, Git cannot automatically determine what is correct.
+So We have to resolve conflicts by keeping upcoming changes, current changes or both changes. Then we have to commit those changes for the resolution of conflict.
+
+# 10.
+Git log is used to review and read a history of everything that happens to a repository. Multiple options can be used with a git log to make history more specific.
+in general, we use git log to show current history of commits.
+
+git log command will display the most recent commits and the status of the head.
+
+git log filters:
+$ git log --oneline- this will display one commit per line, commit message and SHA1 value.
+
+$ git log --stat - this will display the commit history along with the commited files.
+
+$ git log --after="21 days ago"  - We can filter the output by date and time. We have to pass --after or -before argument to specify the date. These both argument accept a variety of date formats.
+  example : git log --after="2019-11-01" --before="2019-11-08 "  
+
+$ git log --author="Author name"  - use to see the commit history of a particular user.
+
+git log --grep=" Commit message"  - with grep command you can search a commit having a particular value and that value you can provide with grep.
+
+# 11.
+
+
+
+
+
+
+
 
