@@ -49,9 +49,7 @@ Git has two types of tags:
 Annoated tag store some extra meta data like author name, release notes, tag-message and date as complete objects in Git db. This is data is important for the release.
 git tag -a v1.1.0 -m "Releasing version v1.1.0"
 
-# 8. git merge 
+# 8. git merge <Branch Name>
 While working with github we create seprate branches for each task like feature branch, bugfixes, qa-fixes etc. These all branches have some seprate functions or code which must be present in the develop branch or master branch for complete working of code. For this purpose We use concept of merging. Merging helps us to keep in sync to our branches with latest code.
-
-
 
 
