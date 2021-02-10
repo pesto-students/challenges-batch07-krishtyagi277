@@ -49,7 +49,7 @@ Git has two types of tags:
 Annoated tag store some extra meta data like author name, release notes, tag-message and date as complete objects in Git db. This is data is important for the release.
 git tag -a v1.1.0 -m "Releasing version v1.1.0"
 
-
+# 8. git merge <Branch Name>
 
 
 
