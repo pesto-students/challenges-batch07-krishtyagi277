@@ -7,6 +7,9 @@ export default class LinkList {
   }
 
   prepend(value) {
+    if (value === null && value === undefined) {
+      throw new Error('Value must not be null or undefined');
+    }
     const node = new LinkListNode(value);
     if (this.countOfNodes === 0) {
       const startNode = this.head;
@@ -19,35 +22,49 @@ export default class LinkList {
   }
 
   append(value) {
+    if (value === null && value === undefined) {
+      throw new Error('Value must not be null or undefined');
+    }
     const node = new LinkListNode(value);
     if (this.countOfNodes === 0) {
       this.head = node;
+      this.countOfNodes += 1;
     } else {
       let current = this.head;
       while (current.next) {
         current = current.next;
       }
       current.next = new LinkListNode(value);
+      this.countOfNodes += 1;
     }
-    this.countOfNodes += 1;
   }
 
   delete(value) {
+    if (value === null && value === undefined) {
+      throw new Error('Value must not be null or undefined');
+    }
     if (this.countOfNodes === 0) {
       return this.head;
     }
     let current = this.head;
     let prev = null;
-    while (current.next) {
+    let found = false;
+    let index = 0;
+    while (index < this.countOfNodes) {
       if (current.value === value) {
+        found = true;
         break;
       }
       prev = current;
       current = current.next;
+      index += 1;
     }
-    prev.next = current.next;
-    this.countOfNodes -= 1;
-    return true;
+    if (found) {
+      prev.next = current.next;
+      this.countOfNodes -= 1;
+      return true;
+    }
+    return false;
   }
 
   traverse() {
@@ -62,6 +79,9 @@ export default class LinkList {
   }
 
   contains(value) {
+    if (value === null && value === undefined) {
+      throw new Error('Value must not be null or undefined');
+    }
     let index = 0;
     if (this.countOfNodes === 0) {
       return false;
